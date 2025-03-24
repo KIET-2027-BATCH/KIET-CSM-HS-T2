@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation" id="background"></div>
+    <div class="container">
+        <h1>Fake News Detection</h1>
+        <p>Enter the news content below to check its authenticity.</p>
+        <form class="fake-news-form">
+            <div class="form-group">
+                <textarea id="news-content" name="news-content" placeholder="Paste the news article here..." required></textarea>
+            </div>
+            <button type="submit" class="animated-button">Detect Fake News</button>
+        </form>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeResult()">
+        <div class="result-popup" id="result" onclick="event.stopPropagation();">
+            <span class="close-btn" onclick="closeResult()">&times;</span>
+            <p id="result-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
